@@ -29,3 +29,31 @@ enum Faculty {
     Law = "Law",
     Engineering = "Engineering",
 }
+
+interface Student {
+    id: number;
+    fullName: string;
+    faculty: Faculty;
+    year: number;
+    status: StudentStatus;
+    enrollmentDate: Date;
+    groupNumber: string;
+}
+
+interface Course {
+    id: number;
+    name: string;
+    type: CourseType;
+    credits: number;
+    semestr: Semester;
+    faculty: Faculty;
+    maxStudents: number;
+}
+
+interface IGrade {
+    studentId: number;
+    courseId: number;
+    grade: Grade;
+    date: Date;
+    semestr: Semester
+}
